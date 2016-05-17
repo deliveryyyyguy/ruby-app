@@ -20,9 +20,26 @@ $navbar-default-bg: #EF6041;
 	height: 250px;
 }
 
+.article-actions {
+	border-top: 1px solid #eaeaea;
+	padding-top: 10px;
+}
+
+.description {
+	margin-top: 0;
+}
+
 footer {
-	margin-top: 45px;
+	margin-top: 400px;
 	padding-top: 5px;
 	border-top: 2px solid #eaeaea;
 	color: #777;
+}
+
+footer a:hover {
+	color: #222;
+}
+
+footer small {
+	float: left;
 }
