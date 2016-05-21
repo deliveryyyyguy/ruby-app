@@ -4,6 +4,8 @@ class SessionsController < ApplicationController
 
 	end
 
+	#Create user session by autheticating user's email and password
+	#Session by user_id stored within rails
 	def create
 		user = User.find_by(email: params[:session][:email].downcase)
 		if user && user.authenticate(params[:session][:password])
@@ -16,9 +18,10 @@ class SessionsController < ApplicationController
 		end
 	end
 
+	#Log out by destroying the session
 	def destroy
 		session[:user_id] = nil
-		flash[:success] = "you have logged out"
+		flash[:success] = "You have logged out."
 		redirect_to root_path
 	end
 

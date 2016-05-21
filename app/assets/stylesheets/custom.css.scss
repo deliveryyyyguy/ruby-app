@@ -28,6 +28,7 @@ $navbar-default-bg: #EF6041;
 .article-actions {
 	border-top: 1px solid #eaeaea;
 	padding-top: 10px;
+
 }
 
 .description {
@@ -51,17 +52,20 @@ $navbar-default-bg: #EF6041;
 	
 }
 
-footer {
-	margin-top: 400px;
-	padding-top: 5px;
-	border-top: 2px solid #eaeaea;
-	color: #777;
+.footer {
+	width: 32px;
+	height: 32px;
+	font-size: 0.8em;
+	line-height: 32px;
+	color: #343a40;
+	background: #ffffff;
+	border-top: 5px solid #eaeaea;
 }
 
-footer a:hover {
+.footer a:hover {
 	color: #222;
 }
 
-footer small {
+.footer small {
 	float: left;
 }
