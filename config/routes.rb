@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'welcome/about', to: 'welcome#about'
 
   resources :articles
+  resources :charges
 
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
