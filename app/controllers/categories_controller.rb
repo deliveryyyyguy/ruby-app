@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
 	
+	#Make admin only access the new, edit, update functions
+	#Allow users to see the index and show functions
 	before_action :require_admin, except: [:index, :show]
+
 
 	def index
 		@categories = Category.paginate(page: params[:page], per_page: 5)
@@ -42,8 +45,8 @@ class CategoriesController < ApplicationController
 
 	end
 
-	#Anythign you put below private, that method will only
-	#Be available to that controller
+	#Anything you put below in private, that method will only --
+	# be available to that controller
 	private
 
 	def category_params
