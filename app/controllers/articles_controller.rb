@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 	#Before actions allow for methods to exist in more than one function
 	#set_user, require_same_user, and require_admin = methods
 	#[all] that are within brackets are the defined function included
-  	before_action :set_article, only: [:edit, :update, :show, :destroy]
+  	before_action :set_article, only: [:edit, :update, :show, :destroy, :upvote]
   	before_action :require_user, except: [:index, :show]
   	before_action :require_same_user, only: [:edit, :update, :destroy]
 
@@ -53,6 +53,11 @@ class ArticlesController < ApplicationController
 		@article.destroy
 		flash[:danger] = "Article deleted"
 		redirect_to articles_path
+	end
+
+	def upvote
+		@article.upvote_by current_user
+		redirect_to :back
 	end
 
 	private

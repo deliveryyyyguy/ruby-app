@@ -1,4 +1,5 @@
 class Article < ActiveRecord::Base
+  acts_as_votable
   belongs_to :user
   has_many :article_categories
   has_many :categories, through: :article_categories

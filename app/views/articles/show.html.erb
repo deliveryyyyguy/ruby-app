@@ -1,9 +1,9 @@
 <h2 align="center">	Title: <%= @article.title %></h2>
-<div class="well col-xs-20 col-xs-offset-2">
+<div class="well col-xs-20 col-xs-offset-16">
 	<% if @article.user %>
 		<ul class="listing">
-			<div class="row left">
-				<div class="col-xs-10 col-xs-offset-left-2">
+			<div class="row">
+				<div class="created">
 					<li>Created by:</li>
 					<li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
 					<li class="article-title">
@@ -11,9 +11,7 @@
 					<li><small>
 						<%= pluralize(@article.user.articles.count, "article") if @article.user.articles %></small></li>
 				</div>
-			</div>
-			<div class="row-right">
-				<div class="col-xs-top-1 col-xs-offset-8">
+				<div class="icons">
 					<li class="pin"><%= link_to image_tag('Pin.png'), root_path %></li>
 					<li class="menu"><%= link_to image_tag('Menu.png'), root_path %></li>
 				</div>
@@ -31,7 +29,6 @@
 	      <span>Amount: $5.00</span>
 	    </label>
 	  </article>
-
 	  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 	          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
 	          data-description="A month's subscription"
@@ -45,6 +42,10 @@
 		<p>Categories: <%= render @article.categories %></p>
 	<% end %>
 	<div class= "article-actions">
+		<%= link_to like_article_path(@article), method: :put, class: "btn btn-default" do %>
+				<span class= "glyphicon glyphicon-thumbs-up"></span>
+				<%= @article.get_upvotes.size %>
+				<% end %>
 		<% if logged_in? && (current_user == @article.user || current_user.admin?) %>
 			<%= link_to "edit this article", edit_article_path(@article), class:"btn btn-xs btn-primary" %>
 			<%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "btn btn-xs btn-danger" %>

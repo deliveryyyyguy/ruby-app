@@ -42,9 +42,11 @@ $navbar-default-bg: #EF6041;
 
 }
 
-.pin {
-    top: 0px;
-    right: 0px;
+.created {
+}
+
+.icons {
+    text-align: right;
 }
 
 .menu {
@@ -62,10 +64,6 @@ $navbar-default-bg: #EF6041;
 .listing {
 	list-style: none;
 	
-}
-
-.row right {
-	float: left;
 }
 
 .badge {

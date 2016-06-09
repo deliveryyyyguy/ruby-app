@@ -7,6 +7,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'stripe'
+gem 'acts_as_votable', '~> 0.10.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets

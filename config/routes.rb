@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   root 'welcome#home'
   get 'welcome/about', to: 'welcome#about'
 
-  resources :articles
+  resources :articles do
+    member do
+      put "like", to: "articles#upvote"
+    end
+  end
+
   resources :charges
 
   get 'signup', to: 'users#new'
