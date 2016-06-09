@@ -16,6 +16,7 @@ $navbar-default-bg: #EF6041;
 
 .jumbotron {
 	background-image: asset-url('homestead.jpg');
+	box-shadow: 10px 10px 5px grey;
 	background-size: cover;
 	height: 250px;
 }
@@ -32,6 +33,10 @@ $navbar-default-bg: #EF6041;
 
 }
 
+.panel-deal {
+	box-shadow: 10px 10px 5px grey;
+}
+
 .description {
 	margin-top: 0;
 }
@@ -42,11 +47,13 @@ $navbar-default-bg: #EF6041;
 
 }
 
+
 .created {
+
 }
 
 .icons {
-    text-align: right;
+	float: right;
 }
 
 .menu {
