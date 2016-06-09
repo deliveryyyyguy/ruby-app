@@ -21,6 +21,22 @@ Things you may want to cover:
 
 * Deployment instructions
 
+* git clone
+
+//get the gems
+* bundle install
+
+//get the migration files
+* rails generate migration
+
+//database handling
+* rake db:migrate
+
+//mess around with console
+* rails console
+
+//OR***
+
 * rails server
 
 * Localhost:3000
