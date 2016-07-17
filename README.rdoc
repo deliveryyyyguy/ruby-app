@@ -17,32 +17,23 @@ Things you may want to cover:
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
 
-* git clone
+* git clone https://github.com/deliveryyyyguy/ruby-app.git
 
-//get the gems
+* cd ruby-app
+
 * bundle install
 
-//get the migration files
-* rails generate migration
-
-//database handling
 * rake db:migrate
 
-//mess around with console
-* rails console
-
-//OR***
+* rails console (mess around with the console)
 
 * rails server
 
 * Localhost:3000
 
 * ...
-
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
